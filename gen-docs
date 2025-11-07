@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+set -e
+cd -- "$(dirname -- "$0")"
+
+nix-build gen-docs.nix
+cp --no-preserve=mode ./result/README.md ./
